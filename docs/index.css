@@ -1,0 +1,296 @@
+:root {
+    --dark-grey: rgb(0, 0, 0, 0.8);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+#navbar {
+    background-color: var(--dark-grey);
+    color: whitesmoke;
+    font-weight: lighter;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+#navbar .large-view {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+#navbar .small-view {
+    display: none;
+}
+
+#navbar li {
+    list-style: none;
+    margin: 0px 40px;
+}
+
+.navlink,
+.navlink:visited {
+    color: white;
+}
+
+.navlink:hover {
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    position: relative;
+    top: 47.2px;
+}
+
+#ribbon {
+    background-color: whitesmoke;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.hero {
+    height: 624px;
+    margin-bottom: 15px;
+}
+
+.hero-content {
+    padding-top: 30px;
+}
+
+.hero-content h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.hero-content h3 {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--dark-grey);
+}
+
+.hero-content p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}
+
+.hero-links {
+    margin-top: 10px;
+}
+
+.hero-links a {
+    font-size: 18px;
+    padding: 0px 20px;
+}
+
+.black h2,
+.black h3 {
+    color: white;
+}
+
+.red {
+    font-size: 16px;
+    color: red;
+}
+
+.white {
+    color: white;
+}
+
+#iphone12 {
+    background-image: url('./assets/iphone12.jpg');
+    background-position-x: center;
+    background-size: cover;
+}
+
+#iphone12Pro {
+    background-image: url('./assets/iphone12Pro.jpg');
+    background-position: 50% center;
+    background-size: cover;
+}
+
+#ipadPro {
+    background-image: url('./assets/ipadPro.jpg');
+    background-position-x: center;
+    background-size: cover;
+}
+
+.other-products {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.other {
+    margin: 0px 10px 15px 10px;
+    height: 584px;
+}
+
+.other-content {
+    padding: 50px 150px 0px 150px;
+}
+
+.other-content h2 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.other-content h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.other-content a {
+    font-size: 18px;
+}
+
+#appleMusic a {
+    color: white;
+}
+
+#macBookEducation {
+    background-image: url('./assets/macBookEducation.jpg');
+    background-size: cover;
+    background-position-x: center;
+}
+
+#appleWatch {
+    background-image: url('./assets/appleWatch.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#appleMusic {
+    background-image: url('./assets/appleMusic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#iMac {
+    background-image: url('./assets/iMac.jpg');
+    background-position-x: center;
+    background-size: cover;
+}
+
+#airTag {
+    background-image: url('./assets/airTag.jpg');
+    background-position-x: center;
+    background-size: cover;
+}
+
+#appleTv {
+    background-image: url('./assets/appleTv.jpg');
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+}
+
+#apple-tv-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    width: 80%;
+    margin: 50px auto;
+    text-align: start;
+}
+
+.footer-content p,
+.footer-content a {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 10px 0px;
+    color: var(--dark-grey);
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    justify-items: start;
+}
+
+.footer-nav .nav-name {
+    color: black;
+    font-weight: 500;
+}
+
+.footer-nav li {
+    list-style: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 900px) {
+    #navbar .large-view {
+        display: none;
+    }
+
+    #navbar .small-view {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .other {
+        margin: 0px 0px 15px 0px;
+    }
+    .other-products {
+        grid-template-columns: 100%;
+    }
+
+    .other-content {
+        padding: 20px;
+    }
+
+    footer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-nav {
+        grid-template-columns: 100%;
+    }
+
+    .footer-nav div {
+        width: 100%;
+    }
+
+    .subnav {
+        width: 100%;
+        border-bottom: 1px solid gray;
+    }
+
+    .subcontent {
+        display: none;
+    }
+}
